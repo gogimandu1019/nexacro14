@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="img" left="0" top="0" width="1024" height="768" titletext="New Form">
+    <Layouts>
+      <Layout>
+        <Static id="Static00" taborder="0" text="테마" left="72" top="29" width="173" height="71" style="background:black;color:aliceblue;"/>
+        <Static id="Static01" taborder="1" text="글로벌" left="432" top="29" width="173" height="71" style="background:black;color:aliceblue;"/>
+        <Static id="Static02" taborder="2" text="직접경로" left="778" top="29" width="173" height="71" style="background:black;color:aliceblue;"/>
+        <ImageViewer id="ImageViewer00" taborder="3" text="ImageViewer00" left="384" top="128" width="287" height="234" image="URL('icecream')"/>
+        <ImageViewer id="ImageViewer01" taborder="4" text="ImageViewer00" left="33" top="131" width="287" height="234" image="URL('theme://doughnut.png')"/>
+        <ImageViewer id="ImageViewer02" taborder="5" text="ImageViewer00" left="721" top="128" width="287" height="234" image="URL('Images::img_sample.png')"/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

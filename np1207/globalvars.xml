@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GlobalVariables>
+  <Images>
+    <Image id="icecream" url="Images::icecream.png"/>
+  </Images>
+  <Dataset id="gds_menu">
+    <ColumnInfo>
+      <Column id="m_id" type="STRING" size="256"/>
+      <Column id="m_name" type="STRING" size="256"/>
+      <Column id="m_lv" type="STRING" size="256"/>
+      <Column id="m_ui" type="STRING" size="256"/>
+    </ColumnInfo>
+    <Rows>
+      <Row>
+        <Col id="m_id">1</Col>
+        <Col id="m_name">main1</Col>
+        <Col id="m_lv">0</Col>
+      </Row>
+      <Row>
+        <Col id="m_id">2</Col>
+        <Col id="m_name">sub1</Col>
+        <Col id="m_lv">1</Col>
+      </Row>
+      <Row>
+        <Col id="m_id">3</Col>
+        <Col id="m_name">hello</Col>
+        <Col id="m_lv">2</Col>
+        <Col id="m_ui">Work::Hello.xfdl</Col>
+      </Row>
+      <Row>
+        <Col id="m_id">4</Col>
+        <Col id="m_name">emp</Col>
+        <Col id="m_lv">2</Col>
+        <Col id="m_ui">Work::emp.xfdl</Col>
+      </Row>
+      <Row>
+        <Col id="m_id">5</Col>
+        <Col id="m_name">main2</Col>
+        <Col id="m_lv">0</Col>
+      </Row>
+      <Row>
+        <Col id="m_id">6</Col>
+        <Col id="m_name">sub2</Col>
+        <Col id="m_lv">1</Col>
+      </Row>
+      <Row>
+        <Col id="m_id">7</Col>
+        <Col id="m_name">img</Col>
+        <Col id="m_lv">2</Col>
+        <Col id="m_ui">Work::img.xfdl</Col>
+      </Row>
+    </Rows>
+  </Dataset>
+</GlobalVariables>

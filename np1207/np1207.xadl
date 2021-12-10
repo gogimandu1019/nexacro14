@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADL version="1.2">
+  <TypeDefinition url="default_typedef.xml"/>
+  <GlobalVariables url="globalvars.xml"/>
+  <Application id="np1207" codepage="utf-8" language="Korean" loginformurl="" loginformstyle="" windowopeneffect="" windowcloseeffect="" version="" tracemode="none" themeid="default.xtheme">
+    <Layout>
+      <MainFrame id="mainframe" title="maintitle" defaultfont="" resizable="true" showtitlebar="true" showstatusbar="true" left="0" top="0" width="800" height="800">
+        <VFrameSet id="VF" separatesize="100,*">
+          <Frames>
+            <ChildFrame id="CF0" showtitlebar="false" showtitleicon="false" formurl="Work::Top.xfdl"/>
+            <HFrameSet id="HF" separatesize="200,*">
+              <Frames>
+                <ChildFrame id="CF1" showtitlebar="false" showtitleicon="false" formurl="Work::Left.xfdl"/>
+                <FrameSet id="FS"/>
+              </Frames>
+            </HFrameSet>
+          </Frames>
+        </VFrameSet>
+      </MainFrame>
+    </Layout>
+    <ScreenInfo/>
+  </Application>
+  <Script type="xscript5.0"><![CDATA[
+// this.gfn_menu = function(obj:Menu, e:nexacro.MenuClickEventInfo)
+// {
+// 	var sID = e.id;
+// 	var sUI = e.userdata;
+// //	var sUI = application.gds_menu.lookup("m_id", sID, "m_ui");
+// 	
+// 	this.fn_menu(sID, sUI);
+// }
+
+this.gfn_menu = function(sID, sUI){
+	var ObjFS = application.mainframe.VF.HF.FS;
+	var arrObj = ObjFS.all;
+	for(var i = 0; i < arrObj.length; i++){
+		if(arrObj[i].name == sID){
+			arrObj[i].setFocus();
+			return;
+		}
+	}
+	//create object
+	var ObjCF = new ChildFrame(sID, "absolute", 0, 0, 800, 600, null, null, sUI);
+	
+	//add object to parent frame
+	ObjFS.addChild(sID, ObjCF);
+	
+	//show object
+	ObjCF.show();
+}]]></Script>
+</ADL>

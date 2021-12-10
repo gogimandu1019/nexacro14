@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Left" left="0" top="0" width="1024" height="768" titletext="New Form">
+    <Layouts>
+      <Layout>
+        <Grid id="Grid00" taborder="0" left="10" top="10" width="186" height="588" binddataset="gds_menu" autofittype="col" treeinitstatus="expand,all" treeusecheckbox="false" oncellclick="Grid00_oncellclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24"/>
+              </Rows>
+              <Band id="body">
+                <Cell displaytype="tree" edittype="tree" text="bind:m_name" treelevel="bind:m_lv"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.0"><![CDATA[include "xlib::menu.xjs";
+this.Grid00_oncellclick = function(obj:Grid, e:nexacro.GridClickEventInfo)
+{
+	var sID = application.gds_menu.getColumn(e.row, "m_id");
+	var sUI = application.gds_menu.getColumn(e.row, "m_ui");
+	trace("sID -> " + sID);
+	trace("sUI -> " + sUI);
+	application.gfn_menu(sID, sUI);
+	//this.cfn_menu(sID, sUI);
+}
+]]></Script>
+  </Form>
+</FDL>

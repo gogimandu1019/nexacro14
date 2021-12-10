@@ -1,0 +1,24 @@
+﻿Static
+{
+	
+	background	: bisque ;
+}
+
+Static:mouseover
+{
+	background	: burlywood ;
+	
+}
+#st_title{
+	
+	background	: coral ;
+}
+Static.val_chk{
+	
+	background	: yellowgreen ;
+}
+
+Combo>#dropbutton{
+	
+	background	: orange ;
+}
